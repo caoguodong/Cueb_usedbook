@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cueb_usedbook.iml" filepath="$PROJECT_DIR$/Cueb_usedbook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cueb_usedbook/Cueb_usedbook-Cueb_usedbook.iml" filepath="$PROJECT_DIR$/Cueb_usedbook/Cueb_usedbook-Cueb_usedbook.iml" />
+    </modules>
+  </component>
+</project>
+
