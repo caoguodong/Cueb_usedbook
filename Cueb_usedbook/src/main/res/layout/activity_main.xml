@@ -6,9 +6,9 @@
 
     <LinearLayout
         android:id="@+id/main_button"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <CheckedTextView
             android:layout_width="0dp"
@@ -35,10 +35,33 @@
             android:background="@drawable/ic_launcher" />
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/main_container"
+    <!--<FrameLayout-->
+    <!--android:id="@+id/main_container"-->
+    <!--android:layout_above="@+id/main_button"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <RelativeLayout
         android:layout_above="@+id/main_button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="扫描二维码" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button1"
+            android:lines="2"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
 
 </RelativeLayout>

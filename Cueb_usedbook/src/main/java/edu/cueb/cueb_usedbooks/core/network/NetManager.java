@@ -28,5 +28,8 @@ public class NetManager {
         this.context = context;
     }
 
+    public void checkBookInfo(){
+
+    }
 
 }

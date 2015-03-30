@@ -9,7 +9,8 @@ import java.util.Set;
  */
 public class ApiHelper {
 
-    public static final  String ROOTURL = "10.0.17.8/";
+    public static final String ROOTURL = "10.0.17.8/";
+    public static final String GETBOOKINFOURL = "https://api.douban.com/v2/book/isbn/";
     //前缀
     public static final String GETUPLOADTOKEN = "getuploadtoken";
 
