@@ -35,16 +35,13 @@
             android:background="@drawable/ic_launcher" />
     </LinearLayout>
 
-    <!--<FrameLayout-->
-    <!--android:id="@+id/main_container"-->
-    <!--android:layout_above="@+id/main_button"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent" />-->
+
 
     <RelativeLayout
-        android:layout_above="@+id/main_button"
+        android:id="@+id/resss"
+        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/button1"
@@ -63,5 +60,13 @@
             android:textColor="@android:color/black"
             android:textSize="16sp" />
     </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_above="@+id/main_button"
+        android:layout_below="@+id/resss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

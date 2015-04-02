@@ -1,13 +1,27 @@
-package edu.cueb.cueb_usedbooks.view;
+package edu.cueb.cueb_usedbooks.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.android.volley.Response;
+
+import org.json.JSONObject;
+
+import java.util.List;
+
 import edu.cueb.cueb_usedbooks.R;
+import edu.cueb.cueb_usedbooks.core.manager.BookManager;
+import edu.cueb.cueb_usedbooks.core.network.NetManager;
+import edu.cueb.cueb_usedbooks.model.NetRequestHolder;
+import edu.cueb.cueb_usedbooks.model.NetWorkListener;
+import edu.cueb.cueb_usedbooks.model.classN.Book;
+import edu.cueb.cueb_usedbooks.view.fragment.BookInfoFragment;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -20,6 +34,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        NetManager.getInstance().init(getApplicationContext());
         mTextView = (TextView) findViewById(R.id.result);
         Button mButton = (Button) findViewById(R.id.button1);
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -56,9 +71,16 @@ public class MainActivity extends ActionBarActivity {
         switch (requestCode) {
             case SCANNIN_GREQUEST_CODE:
                 if(resultCode == RESULT_OK){
+
+                    findViewById(R.id.resss).setVisibility(View.GONE);
                     Bundle bundle = data.getExtras();
                     //显示扫描到的内容
                     mTextView.setText(bundle.getString("result"));
+                    BookManager.getInstance().setIsbn(bundle.getString("result"));
+
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.main_container,new BookInfoFragment());
+                    transaction.commit();
                 }
                 break;
         }

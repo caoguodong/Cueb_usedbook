@@ -1,5 +1,7 @@
 package edu.cueb.cueb_usedbooks.model;
 
+import android.util.Log;
+
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
 import com.android.volley.Request;
@@ -16,7 +18,7 @@ public class UBResquest extends Request<JSONObject>{
 
     Response.Listener listener;
 
-    public UBResquest(int method,String url, Response.Listener listener, Response.ErrorListener errorListener) {
+    public UBResquest(int method,String url, Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
         super(method,url,errorListener);
         this.listener = listener;
     }

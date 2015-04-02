@@ -1,4 +1,4 @@
-package edu.cueb.cueb_usedbooks.view;
+package edu.cueb.cueb_usedbooks.view.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -73,7 +73,6 @@ public class MipcaActivityCapture extends Activity implements SurfaceHolder.Call
         super.onResume();
         SurfaceView surfaceView = (SurfaceView) findViewById(R.id.two_dimension_surface);
         SurfaceHolder surfaceHolder = surfaceView.getHolder();
-        Log.i("info",surfaceHolder.toString());
         if (hasSurface) {
             initCamera(surfaceHolder);
         } else {

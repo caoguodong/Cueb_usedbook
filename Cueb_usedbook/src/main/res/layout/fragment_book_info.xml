@@ -1,10 +1,61 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="edu.cueb.cueb_usedbooks.view.fragment.BookInfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_marginTop="20dp"
+        android:text="Android系统源代码情景分析"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/book_price"
+        android:layout_below="@+id/book_title"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="原价：109.00元"
+        />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/book_image"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/book_price"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="5"
+        android:layout_below="@+id/book_price"
+        android:layout_toRightOf="@+id/book_image"
+        android:text="罗升阳，1984年出生，2007年毕业于浙江大学计算机系，取得学士学位，2010年毕业于上海交通大学计算机系，取得硕士学位。毕业后一直从事于互联网软件开发，并且致力于移动平台的研究，特别是对Android平台有深入的理解和研究。在国内知名IT技术社区CSDN上发表了数十篇高质量的Android系统原创性文章，并且开设博客专栏--《老罗的Android之旅》，积极与网友互动，深受大家喜爱，访问量一直居于前茅。"
+        />
+
+    <TextView
+        android:id="@+id/book_summary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/book_image"
+        android:maxLines="10"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="在内容上，本书结合使用情景，全面、深入、细致地分析Android系统的源代码，涉及到Linux内核层、硬件抽象层（HAL）、运行时库层(Runtime)、应用程序框架层(Application Framework)以及应用程序层(Application)。\n在组织上，本书将上述内容划分为初识Android系统、Android专用驱动系统和Android应用程序框架三大篇章。初识Android系统篇介绍了参考书籍、基础知识以及实验环境搭建；Android专用驱动系统篇介绍了Logger日志驱动程序、Binder进程间通信驱动程序以及Ashmem匿名共享内存驱动程序；Android应用程序框架篇从组件、进程、消息以及安装四个维度来对Android应用程序的框架进行了深入的剖析。\n通过上述内容及其组织，本书能使读者既能从整体上把握Android系统的层次结构，又能从细节上去掌握每一个层次的要点。"
+        />
+</RelativeLayout>

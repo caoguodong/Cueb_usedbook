@@ -27,7 +27,7 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.ResultPointCallback;
 
-import edu.cueb.cueb_usedbooks.view.MipcaActivityCapture;
+import edu.cueb.cueb_usedbooks.view.activity.MipcaActivityCapture;
 
 /**
  * This thread does all the heavy lifting of decoding the images.

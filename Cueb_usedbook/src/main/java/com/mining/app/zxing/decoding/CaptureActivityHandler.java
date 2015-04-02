@@ -34,7 +34,7 @@ import com.mining.app.zxing.camera.CameraManager;
 import com.mining.app.zxing.view.ViewfinderResultPointCallback;
 
 import edu.cueb.cueb_usedbooks.R;
-import edu.cueb.cueb_usedbooks.view.MipcaActivityCapture;
+import edu.cueb.cueb_usedbooks.view.activity.MipcaActivityCapture;
 
 /**
  * This class handles all the messaging which comprises the state machine for capture.
